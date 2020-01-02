@@ -5,6 +5,8 @@ http://creativecommons.org/licenses/by-nc-nd/3.0/de/
 
 ### How to install and start
 
+Make sure you have allocated minimum 6gig RAM to your docker-host.
+
 Just adapt and run the docker-compose.yml file.
 Please adapt the docker host ip.
 * API_HOST=192.168.99.100
