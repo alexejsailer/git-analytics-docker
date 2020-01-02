@@ -1,0 +1,1 @@
+Copy git repositories to this folder. Please make sure, that your docker-host is not open to the world so that all services remain bound to a hidden network.
