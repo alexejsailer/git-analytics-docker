@@ -1,0 +1,83 @@
+version: '2'
+services:
+  data:
+    image: ubuntu:18.04
+    volumes:
+      - ./storage/elasticsearch:/usr/share/elasticsearch/data
+      - ./repositories:/repositories
+      - ./storage/log:/log
+  git-analytics-client:
+    image: dualexec/git-analytics-client
+    volumes_from:
+    - data
+    environment:
+      - API_HOST=192.168.99.100
+    ports:
+    - 80:80
+    networks:
+      back0:
+        aliases:
+          - git-analytics-states
+  git-analytics-states:
+    image: dualexec/git-analytics-states
+    volumes_from:
+    - data
+    ports:
+    - 8080:8080
+    networks:
+      back0:
+        aliases:
+          - git-analytics-states
+  git-analytics-repositories:
+    image: dualexec/git-analytics-repositories
+    volumes_from:
+    - data
+    ports:
+    - 8090:8090
+    networks:
+      back0:
+        aliases:
+          - git-analytics-repositories
+  git-analytics-charts:
+    image: dualexec/git-analytics-charts
+    volumes_from:
+    - data
+    ports:
+    - 8070:8070
+    networks:
+      back0:
+        aliases:
+          - git-analytics-charts
+  elasticsearch:
+    image: elasticsearch:2.4.3
+    volumes:
+      - ./config/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    environment:
+      ES_HEAP_SIZE: "4g"
+    volumes_from:
+      - data
+    ports:
+    - 9200:9200
+    - 9300:9300
+    networks:
+      back0:
+        aliases:
+          - elasticsearch
+  kibana:
+    build: ./images/kibana
+    volumes:
+      - ./config/kibana/kibana.yml:/opt/kibana/config/kibana.yml
+    networks:
+      back0:
+        aliases:
+          - kibana
+  proxy_kibana:
+    build: ./images/proxy/kibana
+    volumes:
+      - ./config/proxy/htpasswd:/etc/apache2/htpasswd
+    ports: 
+    - 5601:443
+    networks:
+      back0:
+networks:
+  back0:
