@@ -7,7 +7,7 @@ services:
       - ./repositories:/repositories
       - ./storage/log:/log
   git-analytics-client:
-    image: dualexec/git-analytics-client
+    image: alexejsailer/git-analytics-client
     volumes_from:
     - data
     environment:
@@ -19,7 +19,7 @@ services:
         aliases:
           - git-analytics-states
   git-analytics-states:
-    image: dualexec/git-analytics-states
+    image: alexejsailer/git-analytics-states
     volumes_from:
     - data
     ports:
@@ -29,7 +29,7 @@ services:
         aliases:
           - git-analytics-states
   git-analytics-repositories:
-    image: dualexec/git-analytics-repositories
+    image: alexejsailer/git-analytics-repositories
     volumes_from:
     - data
     ports:
@@ -39,7 +39,7 @@ services:
         aliases:
           - git-analytics-repositories
   git-analytics-charts:
-    image: dualexec/git-analytics-charts
+    image: alexejsailer/git-analytics-charts
     volumes_from:
     - data
     ports:
