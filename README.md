@@ -29,6 +29,16 @@ After some time you should find a result, like shown by the screenshots, at 192.
 
 Have fun.
 
+Angular Client:
+
+http://192.168.99.100
+
+Kibana Client
+
+http://192.168.99.100:5601
+
+Where 192.168.99.100 is your dockerhost ip.
+
 [![Foo](https://www.dualexec.com/wiki/lib/tpl/markgard-gtopia-wiki-c621a539da50/images/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/3.0/de/)
 
 
