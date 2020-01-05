@@ -1,7 +1,7 @@
 # git-analytics-docker
 Analyze the history and manage your own git repositories!
 
-http://creativecommons.org/licenses/by-nc-nd/3.0/de/
+http://creativecommons.org/licenses/by-nc-nd/3.0/en/
 
 ### How to install and start
 
