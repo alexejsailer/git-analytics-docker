@@ -23,7 +23,9 @@ repository->project1->r1,r2,r3
 
 Run this curl command to start fetching all commits from your repositories:
 
+```bash
 curl -u admin:test -d "{\"command\": \"FETCH\"}" -H "Content-Type: application/json" -X POST http://192.168.99.100:8090/repository-fetcher/api/v1/commands
+```
 
 After some time you should find a result, like shown by the screenshots, at 192.168.99.100.
 
