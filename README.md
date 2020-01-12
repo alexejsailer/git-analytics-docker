@@ -1,7 +1,7 @@
 # git-analytics-docker
 Analyze the history and manage your own git repositories!
 
-http://creativecommons.org/licenses/by-nc-nd/3.0/de/
+http://creativecommons.org/licenses/by-nc-nd/3.0/
 
 ### How to install and start
 
@@ -13,7 +13,22 @@ Please adapt the docker host ip.
 
 This ip will be used by the angular client, which will be available at this address.
 
-Copy git repositories you want analyze to the repository folder. Please make sure, that your docker-host is not open to the world so that all services remain bound to a hidden network. In future I will secure the client with a password and hide all elasticsearch ports. 
+### Option 1
+
+Directly analyze a complete git-hub account:
+
+curl -u admin:test -d "{\"name\": \"alexejsailer\",\"projectId\": \"myRepos\"}" -H "Content-Type: application/json" -X POST http://192.168.99.100:8090/repository-fetcher/api/v1/projects
+
+That may take some time, as it will use the github api to get all clone urls for this account. It waits between each repository api call.
+After you get a response you can run
+
+curl -u admin:test -d "{\"command\": \"FETCH_PROJECT\"}" -H "Content-Type: application/json" -X POST http://192.168.99.102:8090/repository-fetcher/api/v1/commands
+
+To clone all projects into the repository folder and to transfer all commits to elasticsearch for further analyse.
+
+### Option 2
+
+Copy git repositories you want to analyze to the repository folder. Please make sure, that your docker-host is not open to the world so that all services remain bound to a hidden network. In future I will secure the client with a password and hide all elasticsearch ports. 
 
 You may want to group your repositories by projects:
 
