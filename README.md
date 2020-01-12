@@ -22,7 +22,7 @@ curl -u admin:test -d "{\"name\": \"alexejsailer\",\"projectId\": \"myRepos\"}" 
 That may take some time, as it will use the github api to get all clone urls for this account. It waits between each repository api call.
 After you get a response you can run
 
-curl -u admin:test -d "{\"command\": \"FETCH_PROJECT\"}" -H "Content-Type: application/json" -X POST http://192.168.99.102:8090/repository-fetcher/api/v1/commands
+curl -u admin:test -d "{\"command\": \"FETCH_PROJECT\"}" -H "Content-Type: application/json" -X POST http://192.168.99.100:8090/repository-fetcher/api/v1/commands
 
 To clone all projects into the repository folder and to transfer all commits to elasticsearch for further analyse.
 
