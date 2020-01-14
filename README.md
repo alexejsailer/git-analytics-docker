@@ -15,7 +15,7 @@ This ip will be used by the angular client, which will be available at this addr
 
 ### Option 1
 
-Directly analyze a complete git-hub account:
+Directly analyze a complete GitHub account:
 
 curl -u admin:test -d "{\"name\": \"alexejsailer\",\"projectId\": \"myRepos\"}" -H "Content-Type: application/json" -X POST http://192.168.99.100:8090/repository-fetcher/api/v1/projects
 
