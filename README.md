@@ -84,7 +84,7 @@ curl -u admin:test -d "{\"command\": \"FETCH_PROJECT\"}" -H "Content-Type: appli
 
 Wait some time until it transfers all commits completely to elasticsearch.
 
-![Foo](https://user-images.githubusercontent.com/4124280/72564447-0b1beb00-38b0-11ea-844d-2c3f815cbdc7.png)
+![Firefox_Screenshot_2020-01-16T21-36-40 782Z](https://user-images.githubusercontent.com/4124280/72564719-bcbb1c00-38b0-11ea-9270-3eea47cdd889.png)
 
 ### Websites using this source code:
 
