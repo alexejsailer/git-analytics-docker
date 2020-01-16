@@ -72,6 +72,18 @@ Where 192.168.99.100 is your dockerhost ip.
 
 [![Foo](https://www.dualexec.com/page/lib/exe/fetch.php?media=2019-03-24_15_11_26-crypto-analytics_commit_type.png)](http://www.dualexec.com/)
 
+### Example
+
+```bash
+curl -u admin:test -d "{\"name\": \"JabRef\",\"projectId\": \"myRepos\"}" -H "Content-Type: application/json" -X POST http://192.168.99.100:8090/repository-fetcher/api/v1/projects
+```
+
+```bash
+curl -u admin:test -d "{\"command\": \"FETCH_PROJECT\"}" -H "Content-Type: application/json" -X POST http://192.168.99.100:8090/repository-fetcher/api/v1/commands
+
+Wait some time until it transfers all commits completely to elasticsearch.
+
+![Foo](https://user-images.githubusercontent.com/4124280/72564447-0b1beb00-38b0-11ea-844d-2c3f815cbdc7.png)
 
 ### Websites using this source code:
 
