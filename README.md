@@ -80,6 +80,7 @@ curl -u admin:test -d "{\"name\": \"JabRef\",\"projectId\": \"myRepos\"}" -H "Co
 
 ```bash
 curl -u admin:test -d "{\"command\": \"FETCH_PROJECT\"}" -H "Content-Type: application/json" -X POST http://192.168.99.100:8090/repository-fetcher/api/v1/commands
+```
 
 Wait some time until it transfers all commits completely to elasticsearch.
 
