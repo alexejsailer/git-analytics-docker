@@ -67,6 +67,9 @@ Where 192.168.99.100 is your dockerhost ip.
 
 [![Foo](https://www.dualexec.com/page/lib/exe/fetch.php?media=2019-03-24_15_11_26-crypto-analytics_commit_type.png)](http://www.dualexec.com/)
 
+[![Foo](https://user-images.githubusercontent.com/4124280/72562095-eec97f80-38aa-11ea-8b8e-18310a599842.png)](http://www.dualexec.com/)
+
+
 ### Websites using this source code:
 
 ![Alt text](dashboard.png?raw=true "Optional Title")
