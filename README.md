@@ -3,6 +3,10 @@ Analyze the history and manage your own git repositories!
 
 http://creativecommons.org/licenses/by-nc-nd/3.0/
 
+[![Foo](https://www.dualexec.com/wiki/lib/tpl/markgard-gtopia-wiki-c621a539da50/images/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/3.0/de/)
+
+[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="120">](https://www.buymeacoffee.com/alexejsailer)
+
 ### How to install and start
 
 Make sure you have allocated minimum 6gig RAM to your docker-host.
@@ -60,9 +64,6 @@ Kibana Client
 http://192.168.99.100:5601
 
 Where 192.168.99.100 is your dockerhost ip.
-
-[![Foo](https://www.dualexec.com/wiki/lib/tpl/markgard-gtopia-wiki-c621a539da50/images/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/3.0/de/)
-
 
 [![Foo](https://www.dualexec.com/page/lib/exe/fetch.php?media=2019-03-24_14_43_47-crypto-analyticsprojects.png)](http://www.dualexec.com/)
 
