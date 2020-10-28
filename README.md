@@ -5,7 +5,7 @@ http://creativecommons.org/licenses/by-nc-nd/3.0/
 
 [![Foo](https://www.dualexec.com/wiki/lib/tpl/markgard-gtopia-wiki-c621a539da50/images/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/3.0/de/)
 
-[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="120">](https://www.buymeacoffee.com/alexejsailer)
+[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="150">](https://www.buymeacoffee.com/alexejsailer)
 
 ### How to install and start
 
